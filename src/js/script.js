@@ -1,10 +1,13 @@
 // Download do currículo
-document.getElementById("downloadBtn").addEventListener("click", () => {
+document.getElementById("downloadBtn").addEventListener("click", (e) => {
+  e.preventDefault(); // Evita navegação padrão
   const link = document.createElement("a");
-  link.href = "lucas.sarmento01.pdf";
+  link.href = "./src/doc/lucas.sarmento01.pdf";
   link.download = "Lucas-Sarmento-Curriculo.pdf";
+  link.target = "_blank";
   link.click();
 });
+
 
 // Mensagem ao clicar nos botões de redes
 document.getElementById("githubBtn").addEventListener("click", () => {

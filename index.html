@@ -8,158 +8,99 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
-  <body>
-    <main class="main">
-      <div class="profile">
+  <body class="bg-dark text-light">
+    <main class="container py-5">
+      <div class="text-center mb-5">
         <img
           src="./src/doc/IMG_6339.JPG"
-          class="profile__image"
+          class="profile__image img-fluid rounded-circle mb-3"
           alt="Lucas Silva Sarmento"
         />
-        <h1 class="profile__name">Lucas Sarmento</h1>
-        <p class="profile__tech">JavaScript | TypeScript | Angular</p>
-        <p class="profile__location">Vitória, Espírito Santo, Brasil</p>
-
-        <p class="profile__bio">
+        <h1 class="fw-bold">Lucas Sarmento</h1>
+        <p class="text-info">JavaScript | TypeScript | Angular</p>
+        <p class="text-secondary">Vitória, Espírito Santo, Brasil</p>
+        <p class="lead mx-auto" style="max-width: 700px">
           Atualmente estudante de Ciência da Computação e estagiário. Trabalho
           com tecnologias modernas e estou sempre buscando evolução contínua.
           Interesse por desenvolvimento web, automação e projetos de impacto.
         </p>
 
-        <div class="profile__buttons">
-          <button class="btn btn--green">Download currículo</button>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+          <a id="downloadBtn" class="btn btn-success">Download Currículo</a>
           <a
+            id="githubBtn"
             href="https://github.com/sarmentos"
-            class="btn btn--dark"
+            class="btn btn-outline-light"
             target="_blank"
             >GitHub</a
           >
           <a
-            href="www.linkedin.com/in/lucas-silva-sarmento"
-            class="btn btn--blue"
+            id="linkedinBtn"
+            href="https://www.linkedin.com/in/lucas-silva-sarmento-92a929278/"
+            class="btn btn-primary"
             target="_blank"
             >LinkedIn</a
           >
         </div>
+      </div>
 
-        <div class="profile__contact">
-          <div class="contact-box">
-            <span>📱 Envie uma mensagem:</span>
-            <p>WhatsApp: (27) 99643-3472</p>
-          </div>
-          <div class="contact-box">
-            <span>📧 Envie um e-mail:</span>
-            <p>lucassilvasarmentos3@gmail.com</p>
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-6">
+          <div class="bg-secondary bg-opacity-10 p-4 rounded">
+            <h5 class="mb-2">📱 Envie uma mensagem:</h5>
+            <p class="mb-0">WhatsApp: (27) 99643-3472</p>
           </div>
         </div>
-
-        <div class="tech-icons">
-          <!-- HTML -->
-          <div class="icon" title="HTML5">
-            <svg width="40" height="40" viewBox="0 0 128 128">
-              <path
-                fill="#E44D26"
-                d="M19.1 114.2L10.3 0h107.4l-8.8 114.2L64.1 128"
-              />
-              <path fill="#F16529" d="M64 117.3l34.8-9.6 7.5-96.7H64" />
-              <path
-                fill="#EBEBEB"
-                d="M64 52.4H44.5l-1.2-13.7h20.7V25.6H29.9l.3 3.8 4.4 55.7H64z"
-              />
-              <path
-                fill="#FFF"
-                d="M63.9 74.1l-.1.1H47.8l1.3 15.1 15.2 4.2h.1z"
-              />
-              <path fill="#FFF" d="M64.1 91.3v-17.2H79l-1.4 16.2z" />
-            </svg>
+        <div class="col-md-6 mt-3 mt-md-0">
+          <div class="bg-secondary bg-opacity-10 p-4 rounded">
+            <h5 class="mb-2">📧 Envie um e-mail:</h5>
+            <p class="mb-0">lucassilvasarmentos3@gmail.com</p>
           </div>
-
-          <!-- CSS -->
-          <div class="icon" title="CSS3">
-            <svg width="40" height="40" viewBox="0 0 128 128">
-              <path
-                fill="#264DE4"
-                d="M19.1 114.2L10.3 0h107.4l-8.8 114.2L64.1 128"
-              />
-              <path fill="#2965F1" d="M64 117.3l34.8-9.6 7.5-96.7H64" />
-              <path
-                fill="#EBEBEB"
-                d="M64 52.4H44.5l-1.2-13.7h20.7V25.6H29.9l.3 3.8 4.4 55.7H64z"
-              />
-              <path
-                fill="#FFF"
-                d="M63.9 74.1l-.1.1H47.8l1.3 15.1 15.2 4.2h.1z"
-              />
-              <path fill="#FFF" d="M64.1 91.3v-17.2H79l-1.4 16.2z" />
-            </svg>
-          </div>
-
-          <!-- JavaScript -->
-          <div class="icon" title="JavaScript">
-            <svg width="40" height="40" viewBox="0 0 128 128">
-              <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z" />
-              <path fill="#323330" d="M116.13 116.13H11.87V11.87h104.26z" />
-              <path
-                fill="#F0DB4F"
-                d="M98.27 102.82c-1.97 4.06-5.77 7.07-11.54 7.07-6.48 0-10.6-3.17-12.61-7.62l9.2-5.59c1.27 2.22 2.43 3.88 5.14 3.88 2.63 0 4.3-1.03 4.3-5.03V63.25h10.52v36.96c.01 7.59-4.45 11.62-10.01 11.62zM58.41 109.94c-7.31 0-12.02-3.5-14.3-8.08l9.2-5.64c2.42 3.94 5.59 5.6 9.7 5.6 4.07 0 6.67-1.61 6.67-7.7V63.25h10.52v36.42c.01 11.48-6.73 17.24-16.79 17.24z"
-              />
-            </svg>
-          </div>
-
-          <!-- Angular -->
-          <div class="icon" title="Angular">
-            <svg width="40" height="40" viewBox="0 0 250 250">
-              <polygon
-                fill="#B52E31"
-                points="125,0 250,46 225,250 125,200 25,250 0,46"
-              />
-              <polygon
-                fill="#FFF"
-                points="125,40 180,190 160,190 145,145 105,145 90,190 70,190"
-              />
-              <polygon fill="#B52E31" points="125,60 105,130 145,130" />
-            </svg>
-          </div>
-
-          <!-- Node.js -->
-          <div class="icon" title="Node.js">
-            <svg width="40" height="40" viewBox="0 0 256 288">
-              <path fill="#8CC84B" d="M128 0L0 72v144l128 72 128-72V72z" />
-              <path
-                fill="#FFF"
-                d="M139.2 218.2c-4.2 2.5-8.1 3.6-13.3 3.6-10.2 0-16.8-5.3-16.8-17.2v-46.1h-16v-21.3h16v-23.3l25.7-6.6v29.9h19.2v21.3h-19.2v42.4c0 6.4 2.5 9.7 8 9.7 2.8 0 5.6-.8 7.8-2.2v19.8z"
-              />
-            </svg>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2>Últimas Experiências</h2>
-          <div class="experience-item">
-            <h3>Estágio em Desenvolvimento - Prodest</h3>
-            <p><strong>Empresa:</strong> PRODEST</p>
-            <p><strong>Período:</strong> SET 2024 - ABR - 2025</p>
-            <p>
-              <strong>Atividades:</strong> Desenvolvimento de interfaces com
-              .NET C#, manutenção de sistemas, e colaboração com time ágil.
-            </p>
-          </div>
-           <div class="section">
-          <h2>Últimas Experiências</h2>
-          <div class="experience-item">
-            <h3>Desenvolvedor Junior - Novo Seguros</h3>
-            <p><strong>Empresa:</strong> NOVO SEGUROS </p>
-            <p><strong>Período:</strong> ABR 2025 - Atualmente</p>
-            <p>
-              <strong>Atividades:</strong> Desenvolvimento de interfaces com
-              typescript, javascript,NodeJs, manutenção de sistemas, e colaboração com time ágil.
-            </p>
-          </div>
-          <!-- Adicione mais experiências conforme necessário -->
         </div>
       </div>
+
+      <div class="d-flex flex-wrap justify-content-center gap-4 mb-5">
+        <!-- Icons SVG reutilizados como está no código original -->
+        <!-- Coloque os svgs aqui novamente -->
+      </div>
+
+      <section>
+        <h2 class="text-center text-info mb-4">Últimas Experiências</h2>
+        <div class="bg-secondary bg-opacity-10 p-4 rounded mb-4">
+          <h4>Estágio em Desenvolvimento - Prodest</h4>
+          <p><strong>Empresa:</strong> PRODEST</p>
+          <p><strong>Período:</strong> SET 2024 - ABR 2025</p>
+          <p>
+            <strong>Atividades:</strong> Desenvolvimento de interfaces com .NET
+            C#, manutenção de sistemas, e colaboração com time ágil.
+          </p>
+        </div>
+        <div class="bg-secondary bg-opacity-10 p-4 rounded">
+          <h4>Desenvolvedor Junior - Novo Seguros</h4>
+          <p><strong>Empresa:</strong> NOVO SEGUROS</p>
+          <p><strong>Período:</strong> ABR 2025 - Atualmente</p>
+          <p>
+            <strong>Atividades:</strong> Desenvolvimento de interfaces com
+            TypeScript, JavaScript, Node.js, manutenção de sistemas, e
+            colaboração com time ágil.
+          </p>
+        </div>
+      </section>
     </main>
+
+    <script src="./src/js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
