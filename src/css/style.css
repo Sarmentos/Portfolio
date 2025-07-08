@@ -1,22 +1,57 @@
-/* Reset e fontes */
+/* Fontes customizadas */
+@font-face {
+  font-display: block;
+  font-family: "bootstrap-icons";
+  src: url("../fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf") format("woff2"),
+       url("../fonts/bootstrap-icons.woff?8d200481aa7f02a2d63a331fc782cfaf") format("woff");
+}
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Corpo e estrutura base */
 body {
   font-family: "Poppins", sans-serif;
   background-color: #0f172a;
   color: #f8fafc;
   line-height: 1.6;
   min-height: 100vh;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
 }
 
+/* Vídeo de fundo fullscreen */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: brightness(0.3);
+}
+
+/* Container principal */
 .main {
   background-color: #1e293b;
   border-radius: 20px;
@@ -26,17 +61,26 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Perfil */
 .profile {
   text-align: center;
 }
 
 .profile__image {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #0ea5e9;
-  margin-bottom: 1rem;
+  border: 5px solid #0ea5e9;
+  margin: 0 auto 1.5rem;
+  display: block;
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile__image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.7);
 }
 
 .profile__name {
@@ -65,6 +109,7 @@ body {
   margin-inline: auto;
 }
 
+/* Botões */
 .profile__buttons {
   display: flex;
   justify-content: center;
@@ -111,6 +156,7 @@ body {
   background-color: #0284c7;
 }
 
+/* Contatos */
 .profile__contact {
   display: flex;
   flex-direction: column;
@@ -135,6 +181,7 @@ body {
   margin-bottom: 0.3rem;
 }
 
+/* Seções */
 .section {
   margin-top: 2rem;
   text-align: center;
@@ -146,6 +193,7 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Tecnologias */
 .tech-icons {
   display: flex;
   justify-content: center;
@@ -163,6 +211,7 @@ body {
   transform: scale(1.1);
 }
 
+/* Experiência */
 .experience-item {
   background-color: #334155;
   padding: 1rem;
@@ -176,7 +225,7 @@ body {
   margin-bottom: 0.3rem;
 }
 
-/* Responsivo */
+/* Responsividade */
 @media (max-width: 768px) {
   .main {
     padding: 2rem;
@@ -191,20 +240,3 @@ body {
     padding: 1rem;
   }
 }
-.profile__image {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid #0ea5e9;
-  margin: 0 auto 1.5rem;
-  display: block;
-  box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile__image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(14, 165, 233, 0.7);
-}
-
