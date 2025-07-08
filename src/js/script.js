@@ -2,8 +2,8 @@
 document.getElementById("downloadBtn").addEventListener("click", (e) => {
   e.preventDefault(); // Evita navegação padrão
   const link = document.createElement("a");
-  link.href = "./src/doc/lucas.sarmento01.pdf";
-  link.download = "Lucas-Sarmento-Curriculo.pdf";
+  link.href = "./src/doc/CURRICULO.docx";
+  link.download = "Lucas-Sarmento-Curriculo.docx";
   link.target = "_blank";
   link.click();
 });
